@@ -21,11 +21,10 @@ fi
 
 echo "S3recon Starting...................................................";
 mkdir -p $target/s3;
-s3recon $wordlist --public | grep PUBLIC | cut -d " " -f 3 | tee $target/s3recon/s3recon.txt
+s3recon $wordlist --public | grep PUBLIC | cut -d " " -f 3 | tee $target/s3/s3recon.txt
 
 echo "Slurp Starting.....................................................";
-mkdir  -p $target/s3 ;
-wget https://github.com/0xbharath/slurp/blob/master/permutations.json -O $target/s3/permutations.json;
+wget https://raw.githubusercontent.com/0xbharath/slurp/master/permutations.json -O $target/s3/permutations.json;
 slurp domain -c 25 -p $target/s3/permutations.json -t $target >>  $target/s3/slurp.txt;
 
 echo "clubbing all.................................................";
