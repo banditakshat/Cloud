@@ -1,7 +1,4 @@
-walmart
 google
+googleapiapi
 apple
 microsoft
-uber
-lyft
-amazon
