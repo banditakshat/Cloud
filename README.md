@@ -25,3 +25,4 @@ Configure your AWS CLI
 ## Example:
     ./cloud.sh -t payatu.io -W wordlist.txt
 
+All the s3 bucket names are saved in the <Target Website>/s3/RawS3.txt and the dumped data of all s3 buckets is saved into <Target Website>/s3/dump.
